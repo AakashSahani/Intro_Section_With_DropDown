@@ -16,6 +16,7 @@ body {
 	height: 100vh;
 	font-family: 'Epilogue', sans-serif;
 	overflow: hidden;
+	background: var(--almostwhite);
 }
 
 /* Utility Classes */
@@ -27,6 +28,10 @@ li {
 a {
 	text-decoration: none;
 	color: var(--mediumgray);
+}
+
+a:hover {
+	cursor: pointer;
 }
 
 .btn {
@@ -44,6 +49,9 @@ a {
 .btn:hover {
 	cursor: pointer;
 	transform: scale(0.99);
+	color: black;
+	background: white;
+	border: 1px solid black;
 }
 /* Nav menu */
 header {
@@ -65,8 +73,39 @@ header .nav-menu {
 .nav-menu .nav-section {
 	display: flex;
 }
+
 .nav-menu .nav-login {
 	display: flex;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.feature-list {
+	visibility: hidden;
+	position: absolute;
+	margin: 0;
+	padding: 1rem;
+	right: 0;
+	top: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	background: white;
+	border-radius: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	box-shadow: 0 0 20px 1px rgb(194, 194, 194);
+}
+
+.feature-list > li {
+	margin: 0.25rem 0;
+	white-space: nowrap;
+}
+
+.feature-list li a img {
+	margin: 0 0.5rem;
 }
 
 /* Section: About */
@@ -94,6 +133,7 @@ header .nav-menu {
 	font-weight: 700;
 	font-size: 4rem;
 	margin: 2rem 0;
+	padding-top: 2rem;
 }
 
 .about-text p {
